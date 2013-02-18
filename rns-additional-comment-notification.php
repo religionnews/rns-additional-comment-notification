@@ -3,7 +3,7 @@
 Plugin Name: RNS Additional Comment Notification
 Plugin URI: https://github.com/religionnews/rns-additional-comment-notification
 Description: Send an email to an additional address when a comment is left on a WordPress site.
-Version: 1.0
+Version: 1.1
 Author: David Herrera
 Author URI:
 License: GPLv2 or later
@@ -61,10 +61,13 @@ function rns_acn_validate_address( $input ) {
   }
 }
 
-// Send an email to the saved address when a comment is submitted
 add_action( 'comment_post', 'rns_acn_notify_address' );
+/**
+ * Send an email to the saved address when a comment is submitted,
+ * but only if the comment is not a trackback or pingback.
+ */
 function rns_acn_notify_address( $commentID ) {
-  if ( get_option( 'rns_acn_address' ) ) {
+  if ( get_option( 'rns_acn_address' ) && ( '' == get_comment( $commentID )->comment_type ) ) {
     $blogname = get_bloginfo( 'blogname' );
     $to = get_option( 'rns_acn_address' );
     $subject = 'New comment at ' . $blogname;

@@ -3,7 +3,7 @@ Contributors: dlh
 Donate link: http://religionnews.com/support-rns
 Tags: comments
 Tested up to: 3.5.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,7 +11,7 @@ Send an email to an additional address when a comment is left on a WordPress sit
 
 == Description ==
 
-RNS Additional Comment Notification sends an email to one address when a comment is left on a WordPress site. The notification contains the comment text and status, and a link to the comment's Edit page in the Dashboard.
+RNS Additional Comment Notification sends an email to one address when a comment is left on a WordPress site. No notification is sent for trackbacks or pingbacks. The notification contains the comment text and status, and a link to the comment's Edit page in the Dashboard.
 
 == Installation ==
 
@@ -23,3 +23,6 @@ RNS Additional Comment Notification sends an email to one address when a comment
 
 = 1.0 =
 * Initial release.
+
+= 1.1 =
+* Ignore trackbacks and pingbacks.
