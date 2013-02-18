@@ -64,10 +64,10 @@ function rns_acn_validate_address( $input ) {
 add_action( 'comment_post', 'rns_acn_notify_address' );
 /**
  * Send an email to the saved address when a comment is submitted,
- * but only if the comment is not a trackback or pingback.
+ * but only if the comment is not spam, a trackback, or a pingback.
  */
 function rns_acn_notify_address( $commentID ) {
-  if ( get_option( 'rns_acn_address' ) && ( '' == get_comment( $commentID )->comment_type ) ) {
+  if ( get_option( 'rns_acn_address' ) && ( '' == get_comment( $commentID )->comment_type ) && ( 'spam' != get_comment( $commentID )->comment_approved ) ) {
     $blogname = get_bloginfo( 'blogname' );
     $to = get_option( 'rns_acn_address' );
     $subject = 'New comment at ' . $blogname;
