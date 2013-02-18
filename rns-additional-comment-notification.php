@@ -3,7 +3,7 @@
 Plugin Name: RNS Additional Comment Notification
 Plugin URI: https://github.com/religionnews/rns-additional-comment-notification
 Description: Send an email to an additional address when a comment is left on a WordPress site.
-Version: 1.1
+Version: 1.2
 Author: David Herrera
 Author URI:
 License: GPLv2 or later
