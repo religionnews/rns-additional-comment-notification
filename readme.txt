@@ -13,7 +13,7 @@ Send an email to an additional address when a comment is left on a WordPress sit
 
 RNS Additional Comment Notification sends an email to one address when a comment is left on a WordPress site. It can be useful if you have an editor or staffer who is responsible for moderating comments on your site but isn't the site admin or a post author.
 
-The notification contains the comment text and status, and a link to the comment's Edit page in the Dashboard. No notification is sent for spam, trackbacks, pingbacks.
+The notification contains the comment text and status, and a link to the comment's Edit page in the Dashboard. No notification is sent for spam, trackbacks, or pingbacks.
 
 == Installation ==
 
